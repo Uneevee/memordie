@@ -130,7 +130,7 @@ public class MemoryGameGUI extends JFrame
     }
     
     JFrame frame = new JFrame();
-    String seq = JOptionPane.showInputDialog(frame, "What is the sequence?");
+    String seq = JOptionPane.showInputDialog(frame, "What is the seqeunce?");
 
     return seq;
   }
@@ -140,7 +140,7 @@ public class MemoryGameGUI extends JFrame
    */
   public void matched()
   { 
-    JOptionPane.showMessageDialog(this, "You matched!", "Congratulations", JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this, "You matched!", "Congrutalations", JOptionPane.PLAIN_MESSAGE);
   }
     
   /**
@@ -150,7 +150,7 @@ public class MemoryGameGUI extends JFrame
    */
   public boolean playAgain()
   {
-    int n = JOptionPane.showConfirmDialog(this, "Do you want to play again?", "Memory Game", JOptionPane.YES_NO_OPTION);
+    int n = JOptionPane.showConfirmDialog(this, "Do you want to play agian?", "Memoory Gme", JOptionPane.YES_NO_OPTION);
     if (n == JOptionPane.YES_OPTION )
       return true;
     return false;
