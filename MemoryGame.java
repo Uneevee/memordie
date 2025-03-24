@@ -50,6 +50,7 @@ public class MemoryGame
         // If match, increase score, and signal a match, otherwise, try again.
 
       // Ask if user wants to play another round of the game 
+<<<<<<< HEAD
       //allee
       public static void public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);//reader is always watching...
@@ -58,9 +59,21 @@ public class MemoryGame
         if (playAgain == "y")
           
       })
+=======
+      playAgain();
+      
+>>>>>>> 3ca438076d9069296a20eb0ffd7ceaa4bb0b58da
       // and track the number of games played.
       //allee
-   
+      public void tracker();
+      {
+        int score = 0   //will these scores reset each time a new round happens?
+        int rounds = 0
+        if (matched() \\ tryagain())
+        int score +=1;
+        int rounds += 1;
+      }
     // When done playing, show score and end the game.
+    showScore();
   }
 }
