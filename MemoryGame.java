@@ -7,7 +7,7 @@
  */
 import java.utils.*;
 import java.util.Scanner;
-
+import java.util.Random;
 public class MemoryGame
 {
   public static void main(String[] args) {
@@ -15,8 +15,8 @@ public class MemoryGame
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    char[] list = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
-    Collections.shuffle(list);
+    list_mem = ("q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m");
+    //Collections.shuffle(list);
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
     // and turn randomization on or off.)
@@ -28,6 +28,11 @@ public class MemoryGame
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
       // - OR -
+      list_removable = list_mem;
+      for(Math.random(3,6))
+      {
+        list_removable.pop(Math.random(0,len(list_removable())))
+      }
       // Overload the next method in RandomPermutation to create a random sequence 
       // of the memory strings, passed as a parameter.
 
@@ -47,7 +52,7 @@ public class MemoryGame
       // Ask if user wants to play another round of the game 
       //allee
       public static void public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);//reader is always watching...
         System.out.println("Do you want to play again?");
         String playAgain = reader.nextLine();
         if (playAgain == "y")
