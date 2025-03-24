@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class MemoryGame
 {
   public static void main(String[] args) {
+    int score = 0   //for tracker function
+    int rounds = 0  //^
     // Create the "memory strings" - an array of single character strings to 
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
@@ -24,9 +26,10 @@ public class MemoryGame
     // Play the game until user wants to quit.
   
       // Create a new array that will contain the randomly ordered memory strings.
-
+      
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
+      playSequence();
       // - OR -
       // Overload the next method in RandomPermutation to create a random sequence 
       // of the memory strings, passed as a parameter.
@@ -51,7 +54,7 @@ public class MemoryGame
       //allee
       public void tracker();
       {
-        int score = 0   //will these scores reset each time a new round happens?
+        int score = 0   
         int rounds = 0
         if (matched() \\ tryagain())
         int score +=1;
