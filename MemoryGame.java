@@ -5,10 +5,12 @@
  * After wathcing the memory strings appear in the buttons one at a time, the
  * player recreates the sequence from memory.
  */
+import java.utils.*;
 public class MemoryGame
 {
   public static void main(String[] args) {
-
+    char[] list = ['q''w''e''r''t''y''u''i''o''p''a''s''d''f''g''h''j''k''l''z''x''c''v''b''n''m']
+    Collections.shuffle(list);
     // Create the "memory strings" - an array of single character strings to 
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
