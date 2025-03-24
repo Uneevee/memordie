@@ -45,17 +45,19 @@ public class MemoryGame
         // If match, increase score, and signal a match, otherwise, try again.
 
       // Ask if user wants to play another round of the game 
-      //allee
-      public static void public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Do you want to play again?");
-        String playAgain = reader.nextLine();
-        if (playAgain == "y")
-          
-      })
+      playAgain();
+      
       // and track the number of games played.
       //allee
-   
+      public void tracker();
+      {
+        int score = 0   //will these scores reset each time a new round happens?
+        int rounds = 0
+        if (matched() \\ tryagain())
+        int score +=1;
+        int rounds += 1;
+      }
     // When done playing, show score and end the game.
+    showScore();
   }
 }
