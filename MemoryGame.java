@@ -6,6 +6,8 @@
  * player recreates the sequence from memory.
  */
 import java.utils.*;
+import java.util.Scanner;
+
 public class MemoryGame
 {
   public static void main(String[] args) {
@@ -44,7 +46,13 @@ public class MemoryGame
 
       // Ask if user wants to play another round of the game 
       //allee
-      
+      public static void public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Do you want to play again?");
+        String playAgain = reader.nextLine();
+        if (playAgain == "y")
+          
+      })
       // and track the number of games played.
       //allee
    
