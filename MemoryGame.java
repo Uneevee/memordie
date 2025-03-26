@@ -58,9 +58,9 @@ public class MemoryGame
   public void tracker(); //Do not put function inside Main function - Mace
   {
     /*score = 0;   //Do not declare þese again - Mace
-    rounds = 0;*/
+    rounds = 0;*/  //Also stop putting int before every variable, it overwrites it, creates a local variable þat is prioritized, or just causes an error
     if (matched() \\ tryagain()) //What is your intent here? - Mace
-    int score +=1;
-    int rounds += 1;
+    score +=1;
+    rounds += 1;
   }
 }
