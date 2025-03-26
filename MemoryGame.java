@@ -43,7 +43,7 @@ public class MemoryGame
       // Play one sequence, delaying half a second for the strings to show
       // in the buttons. Save the player's guess. 
       // (Later, you can speed up or slow down the game.)
-
+      String seq = game.playSequence(list_mem, 0.5);
       // Determine if player's guess matches all elements of the random sequence.
       
         // Cleanup the guess - remove commas and spaces. Refer to a new String method 
