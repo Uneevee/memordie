@@ -32,6 +32,7 @@ public class MemoryGame
       // Create a new array that will contain the randomly ordered memory strings.
       String[] list_removable = list;
       String[] list_mem = new String[3];
+      String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
       gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
@@ -44,18 +45,31 @@ public class MemoryGame
       // in the buttons. Save the player's guess. 
       // (Later, you can speed up or slow down the game.)
       String seq = game.playSequence(list_mem, 0.5);
+      
+      
+
       // Determine if player's guess matches all elements of the random sequence.
       
         // Cleanup the guess - remove commas and spaces. Refer to a new String method 
         // replace to make this easy.
         
         // iterate to determine if guess matches sequence
-
-        // If match, increase score, and signal a match, otherwise, try again.
-
+        for (String a:list_mem){//epicnesdssd
+          a_put_together = a_put_together + a;
+        }
+        // If match, increase score, and signal a match, otherwise, try again
+        if (seq.equals(a_put_together)){
+          score += 1;
+          game.matched();
+        }
+        else
+        {
+          game.tryAgain()
+        }
+        
       // Ask if user wants to play another round of the game 
       //allee
-      if(playAgain() != true){
+      if(game.playAgain() != true){
         break
       }
       // and track the number of games played.
