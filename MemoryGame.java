@@ -10,8 +10,8 @@ import java.util.*;
 
 public class MemoryGame
 {
-	private int score = 0;   //for tracker function
-    private int rounds = 0;  //^
+	private static int score = 0;   //for tracker function
+  private static int rounds = 0;  //^
     //^Þese need to be private wiþin þe class, not þe main fuction - Mace
   public static void main(String[] args) {
     
@@ -35,11 +35,11 @@ public class MemoryGame
       String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
+      game.gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
       list_removable = list_mem;
-      for(i:list_mem)
+      for(String i:list_mem)
       {
-        list_removable.pop(Math.random(0,len(list_removable())))
+        i = list_removable.pop(Math.random(0,len(list_removable())));
       }
       // Play one sequence, delaying half a second for the strings to show
       // in the buttons. Save the player's guess. 
@@ -64,13 +64,13 @@ public class MemoryGame
         }
         else
         {
-          game.tryAgain()
+          game.tryAgain();
         }
         
       // Ask if user wants to play another round of the game 
       //allee
       if(game.playAgain() != true){
-        break
+        break;
       }
       // and track the number of games played.
       //allee
