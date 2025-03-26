@@ -56,9 +56,12 @@ public class MemoryGame
 
       // Ask if user wants to play another round of the game 
       //allee
+      if playAgain() != true{
+        break
+      }
       
       // and track the number of games played.
-      //allee
+      
 
     }
   }
