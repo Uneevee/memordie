@@ -35,15 +35,11 @@ public class MemoryGame
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
       gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
-      // - OR -
       list_removable = list_mem;
       for(i:list_mem)
       {
         list_removable.pop(Math.random(0,len(list_removable())))
       }
-      // Overload the next method in RandomPermutation to create a random sequence 
-      // of the memory strings, passed as a parameter.
-
       // Play one sequence, delaying half a second for the strings to show
       // in the buttons. Save the player's guess. 
       // (Later, you can speed up or slow down the game.)
