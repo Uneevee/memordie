@@ -19,7 +19,7 @@ public class MemoryGame
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    String[] list = {"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"};
+    String[] list = {"a","b","c"};
     	//Gotta figure out how to shuffle þis - Mace
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
