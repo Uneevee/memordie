@@ -35,11 +35,12 @@ public class MemoryGame
       String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      game.gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
       list_removable = list_mem;
       for(String i:list_mem)
-      {
-        i = list_removable.pop(Math.random(0,len(list_removable())));
+      { 
+        int x = (int) Math.random() * list_removable.length;
+        i = list_removable[x];
+        
       }
       // Play one sequence, delaying half a second for the strings to show
       // in the buttons. Save the player's guess. 
@@ -50,7 +51,7 @@ public class MemoryGame
 
       // Determine if player's guess matches all elements of the random sequence.
       
-        // Cleanup the guess - remove commas and spaces. Refer to a new String method 
+        // Cleanup the guess - remove commas and spaces. Refer to a new String method //Lucas
         // replace to make this easy.
         
         // iterate to determine if guess matches sequence
