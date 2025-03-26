@@ -24,7 +24,8 @@ public class MemoryGame
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
     // and turn randomization on or off.)
-
+    //Mace
+    
     // Play the game until user wants to quit.
   while(true){
       // Create a new array that will contain the randomly ordered memory strings.
@@ -56,7 +57,7 @@ public class MemoryGame
 
       // Ask if user wants to play another round of the game 
       //allee
-      
+
       // and track the number of games played.
       //allee
 
