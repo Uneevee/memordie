@@ -26,7 +26,7 @@ public class MemoryGame
     // and turn randomization on or off.)
 
     // Play the game until user wants to quit.
-  
+  while(true){
       // Create a new array that will contain the randomly ordered memory strings.
       
       // Create a list of randomly ordered integers with no repeats, the length
@@ -56,22 +56,11 @@ public class MemoryGame
 
       // Ask if user wants to play another round of the game 
       //allee
-      public static void public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Do you want to play again?");
-        String playAgain = reader.nextLine();
-        if (playAgain == "y")
-          
-      }
-      playAgain();
+      
+      // and track the number of games played.
+      //allee
+
+    }
   }
-  // and track the number of games played.
-  //allee
-    /*score = 0;   //Do not declare þese again - Mace
-    rounds = 0;*/  //Also stop putting int before every variable, it overwrites it, creates a local variable þat is prioritized, or just causes an error
-  public void tracker() { //Do not put function inside Main function - Mace
-    if (matched() \\ tryagain()) //What is your intent here? - Mace
-    score +=1;
-    rounds += 1;
-  }
+  
  }
