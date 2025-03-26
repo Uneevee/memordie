@@ -26,6 +26,7 @@ public class MemoryGame
     // and turn randomization on or off.)
     //Mace
     MemoryGameGUI game = new MemoryGameGUI();
+    game.createBoard(3, false);
     // Play the game until user wants to quit.
   while(true){
       // Create a new array that will contain the randomly ordered memory strings.
