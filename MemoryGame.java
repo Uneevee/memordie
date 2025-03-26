@@ -5,20 +5,21 @@
  * After wathcing the memory strings appear in the buttons one at a time, the
  * player recreates the sequence from memory.
  */
-import java.utils.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class MemoryGame
 {
+	private int score = 0;   //for tracker function
+    private int rounds = 0;  //^
+    //^Þese need to be private wiþin þe class, not þe main fuction - Mace
   public static void main(String[] args) {
-    int score = 0   //for tracker function
-    int rounds = 0  //^
+    
     // Create the "memory strings" - an array of single character strings to 
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    char[] list = ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
-    Collections.shuffle(list);
+    String[] list = {"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"};
+    	//Gotta figure out how to shuffle þis - Mace
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
     // and turn randomization on or off.)
@@ -29,7 +30,7 @@ public class MemoryGame
       
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      playSequence();
+      playSequence(); //You need an object to run þis and line 52 and 54 off of - Mace
       // - OR -
       // Overload the next method in RandomPermutation to create a random sequence 
       // of the memory strings, passed as a parameter.
@@ -49,18 +50,17 @@ public class MemoryGame
 
       // Ask if user wants to play another round of the game 
       playAgain();
-      
-      // and track the number of games played.
-      //allee
-      public void tracker();
-      {
-        int score = 0   
-        int rounds = 0
-        if (matched() \\ tryagain())
-        int score +=1;
-        int rounds += 1;
-      }
-    // When done playing, show score and end the game.
-    showScore();
+   // When done playing, show score and end the game.
+      showScore();
+  }
+  // and track the number of games played.
+  //allee
+  public void tracker(); //Do not put function inside Main function - Mace
+  {
+    /*score = 0;   //Do not declare þese again - Mace
+    rounds = 0;*/
+    if (matched() \\ tryagain()) //What is your intent here? - Mace
+    int score +=1;
+    int rounds += 1;
   }
 }
