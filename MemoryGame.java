@@ -5,18 +5,22 @@
  * After wathcing the memory strings appear in the buttons one at a time, the
  * player recreates the sequence from memory.
  */
-import java.utils.*;
-import java.util.Scanner;
-import java.util.Random;
+
+import java.util.*;
+
 public class MemoryGame
 {
+	private int score = 0;   //for tracker function
+    private int rounds = 0;  //^
+    //^Þese need to be private wiþin þe class, not þe main fuction - Mace
   public static void main(String[] args) {
+    
     // Create the "memory strings" - an array of single character strings to 
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    list_mem = ("q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m");
-    //Collections.shuffle(list);
+    String[] list = {"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"};
+    	//Gotta figure out how to shuffle þis - Mace
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
     // and turn randomization on or off.)
@@ -24,9 +28,10 @@ public class MemoryGame
     // Play the game until user wants to quit.
   
       // Create a new array that will contain the randomly ordered memory strings.
-
+      
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
+      playSequence(); //You need an object to run þis and line 52 and 54 off of - Mace
       // - OR -
       list_removable = list_mem;
       for(Math.random(3,6))
@@ -50,30 +55,23 @@ public class MemoryGame
         // If match, increase score, and signal a match, otherwise, try again.
 
       // Ask if user wants to play another round of the game 
-<<<<<<< HEAD
       //allee
       public static void public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);//reader is always watching...
+        Scanner reader = new Scanner(System.in);
         System.out.println("Do you want to play again?");
         String playAgain = reader.nextLine();
         if (playAgain == "y")
           
-      })
-=======
-      playAgain();
-      
->>>>>>> 3ca438076d9069296a20eb0ffd7ceaa4bb0b58da
-      // and track the number of games played.
-      //allee
-      public void tracker();
-      {
-        int score = 0   //will these scores reset each time a new round happens?
-        int rounds = 0
-        if (matched() \\ tryagain())
-        int score +=1;
-        int rounds += 1;
       }
-    // When done playing, show score and end the game.
-    showScore();
+      playAgain();
   }
-}
+  // and track the number of games played.
+  //allee
+    /*score = 0;   //Do not declare þese again - Mace
+    rounds = 0;*/  //Also stop putting int before every variable, it overwrites it, creates a local variable þat is prioritized, or just causes an error
+  public void tracker() { //Do not put function inside Main function - Mace
+    if (matched() \\ tryagain()) //What is your intent here? - Mace
+    score +=1;
+    rounds += 1;
+  }
+ }
