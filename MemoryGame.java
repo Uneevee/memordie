@@ -62,6 +62,11 @@ public class MemoryGame
         break
       }
       // and track the number of games played.
+      //allee
+      if (matched() == true){
+        score ++;
+      }
+
       
 
     }
