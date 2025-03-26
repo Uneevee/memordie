@@ -72,11 +72,6 @@ public class MemoryGame
       if(game.playAgain() != true){
         break;
       }
-      // and track the number of games played.
-      //allee
-      if (matched() == true){
-        score ++;
-      }
 
       
 
