@@ -29,10 +29,11 @@ public class MemoryGame
     // Play the game until user wants to quit.
   while(true){
       // Create a new array that will contain the randomly ordered memory strings.
-      
+      String[] list_removable = list;
+      String[] list_mem = new String[Math.random(3,6)];
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      playSequence(); //You need an object to run þis and line 52 and 54 off of - Mace
+      gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
       // - OR -
       list_removable = list_mem;
       for(Math.random(3,6))
