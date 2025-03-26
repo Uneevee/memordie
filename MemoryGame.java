@@ -55,12 +55,11 @@ public class MemoryGame
   }
   // and track the number of games played.
   //allee
-  public void tracker(); //Do not put function inside Main function - Mace
-  {
     /*score = 0;   //Do not declare þese again - Mace
     rounds = 0;*/  //Also stop putting int before every variable, it overwrites it, creates a local variable þat is prioritized, or just causes an error
+  public void tracker() { //Do not put function inside Main function - Mace
     if (matched() \\ tryagain()) //What is your intent here? - Mace
     score +=1;
     rounds += 1;
   }
-}
+ }
