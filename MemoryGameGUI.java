@@ -140,7 +140,7 @@ public class MemoryGameGUI extends JFrame
    */
   public void matched()
   { 
-    JOptionPane.showMessageDialog(this, "You matched!", "Congrutalations", JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this, "U matched!", "Congrutalations", JOptionPane.PLAIN_MESSAGE);
   }
     
   /**
