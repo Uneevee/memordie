@@ -19,7 +19,7 @@ public class MemoryGame
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    String[] list = {"a","b","c"};
+    final String[] LIST = {"a","b","c"};
     	//Gotta figure out how to shuffle þis - Mace
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
@@ -30,16 +30,14 @@ public class MemoryGame
     // Play the game until user wants to quit.
   while(true){
       // Create a new array that will contain the randomly ordered memory strings.
-      ArrayList<String> list_removable = new ArrayList<String>;
+      ArrayList<String> list_removable = new ArrayList<String>(Arrays.asList(LIST));
       String[] list_mem = new String[3];
       String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      gameplaySequence(); //You need an object to run þis and line 52 and 54 off of - Mace
-      list_removable = list_mem;
       for(String i:list_mem)
       {
-        int x = (int) Math.random() * list_removable.length;
+        int x = (int) Math.random() * list_removable.size();
         i = list_removable.get(x);
         list_removable.remove(x);
         
