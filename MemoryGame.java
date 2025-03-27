@@ -11,7 +11,7 @@ import java.util.*;
 public class MemoryGame
 {
 	private static int score = 0;   //for tracker function
-  private static int rounds = 0;  //^
+  private static int rounds = 3;  //^
     //^Þese need to be private wiþin þe class, not þe main fuction - Mace
   public static void main(String[] args) {
     
@@ -19,7 +19,7 @@ public class MemoryGame
     // show in the buttons, one element at a time. This is the sequence
     // the player will have to remember.
     // Mace
-    final String[] LIST = {"a","b","c"};
+    final String[] LIST = {"q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"};
     	//Gotta figure out how to shuffle þis - Mace
     // Create the game and gameboard. Configure a randomized board with 3 buttons.
     // (Later, you can change options to configure more or less buttons
@@ -29,15 +29,15 @@ public class MemoryGame
     game.createBoard(3, false);
     // Play the game until user wants to quit.
   while(true){
-      // Create a new array that will contain the randomly ordered memory strings.
+      // Create a new array that will corntain the randomly ordered memory strings.
       ArrayList<String> list_removable = new ArrayList<String>(Arrays.asList(LIST));
-      String[] list_mem = new String[LIST.length];
+      String[] list_mem = new String[rounds];
       String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      for(int i = 0; i < list_mem.length; i++)
+      for(int i = 0; i < ((rounds+1 >= LIST.length)?LIST.length:rounds); i++)
       {
-        int x = (int) Math.random() * list_removable.size();
+        int x = (int) (Math.random() * list_removable.size());
         list_mem[i] = list_removable.get(x);
         list_removable.remove(x);
         
@@ -45,7 +45,7 @@ public class MemoryGame
       // Play one sequence, delaying half a second for the strings to show
       // in the buttons. Save the player's guess. 
       // (Later, you can speed up or slow down the game.)
-      String seq = game.playSequence(list_mem, 0.5);
+      String seq = game.playSequence(list_mem, 0.5-rounds*0.02);
       
       
 
@@ -64,10 +64,13 @@ public class MemoryGame
         if (seq.equals(a_put_together)){
           score += 1;
           game.matched();
+          rounds += 1;
         }
         else
         {
           game.tryAgain();
+          game.showScore(score, rounds - 3);
+          rounds = 3;
         }
         
       // Ask if user wants to play another round of the game 

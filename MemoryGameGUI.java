@@ -172,7 +172,7 @@ public class MemoryGameGUI extends JFrame
    */
   public void tryAgain()
   { 
-    JOptionPane.showMessageDialog(this, "Try again...", "Oops", JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this, "GAMEOVER!", "Oops", JOptionPane.PLAIN_MESSAGE);
   }
 
   /**
