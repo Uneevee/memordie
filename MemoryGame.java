@@ -31,14 +31,14 @@ public class MemoryGame
   while(true){
       // Create a new array that will contain the randomly ordered memory strings.
       ArrayList<String> list_removable = new ArrayList<String>(Arrays.asList(LIST));
-      String[] list_mem = new String[3];
+      String[] list_mem = new String[LIST.length];
       String a_put_together = "";
       // Create a list of randomly ordered integers with no repeats, the length
       // of memory strings. Use it to create a random sequence of the memory strings.
-      for(String i:list_mem)
+      for(int i = 0; i < list_mem.length; i++)
       {
         int x = (int) Math.random() * list_removable.size();
-        i = list_removable.get(x);
+        list_mem[i] = list_removable.get(x);
         list_removable.remove(x);
         
       }
@@ -58,6 +58,8 @@ public class MemoryGame
         for (String a:list_mem){//epicnesdssd
           a_put_together = a_put_together + a;
         }
+        System.out.println("seq=" + seq);
+        System.out.println("actual=" + a_put_together);
         // If match, increase score, and signal a match, otherwise, try again
         if (seq.equals(a_put_together)){
           score += 1;
