@@ -28,7 +28,7 @@ public class MemoryGame
     MemoryGameGUI game = new MemoryGameGUI();
     game.createBoard(3, false);
     // Play the game until user wants to quit.
-  while(true){
+    while(true){
       // Create a new array that will corntain the randomly ordered memory strings.
       ArrayList<String> list_removable = new ArrayList<String>(Arrays.asList(LIST));
       String[] list_mem = new String[rounds];
@@ -46,42 +46,40 @@ public class MemoryGame
       // in the buttons. Save the player's guess. 
       // (Later, you can speed up or slow down the game.)
       String seq = game.playSequence(list_mem, 0.5-rounds*0.02);
-      
-      
+      if(seq == null){seq = "";}
 
       // Determine if player's guess matches all elements of the random sequence.
       
         // Cleanup the guess - remove commas and spaces. Refer to a new String method //Lucas
         // replace to make this easy.
-        
+        String fixedStr = "";
+        for (char i:seq.toCharArray()){
+          if(!(i == ' '||i == ',')){fixedStr = fixedStr + i;}
+        }
         // iterate to determine if guess matches sequence
         for (String a:list_mem){//epicnesdssd
           a_put_together = a_put_together + a;
         }
-        System.out.println("seq=" + seq);
-        System.out.println("actual=" + a_put_together);
         // If match, increase score, and signal a match, otherwise, try again
-        if (seq.equals(a_put_together)){
+        if (a_put_together.equals(fixedStr)){
           score += 1;
-          game.matched();
+          if(Math.random() <= 0.1){game.tryAgain();game.matched();}else{game.matched();} //trolling
           rounds += 1;
         }
         else
         {
           game.tryAgain();
-          game.showScore(score, rounds - 3);
+          game.showScore(score, rounds - 2);
           rounds = 3;
+          score = 0;
         }
         
       // Ask if user wants to play another round of the game 
       //allee
-      if(game.playAgain() != true){
+      if(!game.playAgain()){
         break;
       }
-
-      
-
     }
+    game.quit();
   }
-  
  }

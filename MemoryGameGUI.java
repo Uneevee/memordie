@@ -164,7 +164,7 @@ public class MemoryGameGUI extends JFrame
    */
   public void showScore(int score, int rounds)
   {
-    JOptionPane.showMessageDialog(this, "You scored " + score + " out of " + rounds, "Score Summary", JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this, "You scored " + score + " out of " + rounds + " rounds.", "Score Summary", JOptionPane.PLAIN_MESSAGE);
   }
   
   /**
@@ -174,7 +174,11 @@ public class MemoryGameGUI extends JFrame
   { 
     JOptionPane.showMessageDialog(this, "GAMEOVER!", "Oops", JOptionPane.PLAIN_MESSAGE);
   }
-
+  public void FaketryAgain()
+  { 
+    JOptionPane.showMessageDialog(this, "GAMEOVER!", "Oops", JOptionPane.PLAIN_MESSAGE);
+    JOptionPane.showMessageDialog(this, "Just kidding!", ":3", JOptionPane.PLAIN_MESSAGE);
+  }
   /**
    * Close the board, ending the game.
    */
