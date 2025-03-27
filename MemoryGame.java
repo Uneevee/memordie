@@ -40,7 +40,8 @@ public class MemoryGame
       for(String i:list_mem)
       {
         int x = (int) Math.random() * list_removable.length;
-        i = list_removable[x];
+        i = list_removable.get(x);
+        list_removable.remove(x);
         
       }
       // Play one sequence, delaying half a second for the strings to show
